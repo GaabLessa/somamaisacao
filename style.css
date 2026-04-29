@@ -1,0 +1,478 @@
+:root {
+  --marrom: #6B3E2E;
+  --marrom-escuro: #3B241A;
+  --bege: #F4EDE4;
+  --laranja: #E58A2C;
+  --cinza: #777;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bege);
+  color: var(--marrom);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: var(--bege);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 70px;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--marrom);
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline suave */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--laranja);
+  left: 0;
+  bottom: -5px;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("/imagens/soma.png") center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+  color: whitesmoke;
+}
+
+/* BOTÕES */
+button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  background: var(--laranja);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.25s ease, background 0.25s ease;
+  will-change: transform;
+}
+
+button:hover {
+  background: #cf741f;
+  transform: translateY(-2px);
+}
+
+/* botão secundário */
+.outline {
+  background: var(--marrom);
+  border: 2px solid white;
+}
+
+.outline:hover {
+  background: white;
+  color: var(--marrom);
+}
+
+/* SEÇÕES */
+section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* TITULOS */
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  max-width: 700px;
+  margin: auto;
+  color: #3B241A;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: transform 0.25s ease;
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transform: translateZ(0);
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+/* IMPACTO */
+.impacto {
+  background: white;
+}
+
+.impacto h3 {
+  font-size: 36px;
+  color: var(--laranja);
+}
+
+/* LISTAS */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+/* DOAÇÃO */
+.doacao {
+  background: white;
+}
+
+.pix-box img {
+  width: 180px;
+  margin-top: 20px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  margin: 30px auto;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--laranja);
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  will-change: transform;
+  transition: transform 0.25s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.08);
+}
+
+/* PÁGINAS INTERNAS */
+.pagina {
+  padding: 120px 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+/* STORYTELLING */
+.historia-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.historia-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.historia-texto {
+  flex: 1;
+}
+
+.historia-texto h2 {
+  margin-bottom: 15px;
+}
+
+.historia-texto p {
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .historia-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* INSTAGRAM */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.insta-post {
+  display: none; /* importante pro carrossel leve */
+}
+
+.insta-post.active {
+  display: block;
+}
+
+.instagram-media {
+  width: 100% !important;
+  min-height: 400px !important;
+  max-height: 420px !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.instagram-media:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .insta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FLOAT BUTTONS */
+.social-float {
+  position: fixed;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease;
+  z-index: 999;
+  will-change: transform;
+}
+
+/* WhatsApp */
+.social-float.whatsapp {
+  bottom: 20px;
+  background: #25D366;
+}
+
+/* Instagram */
+.social-float.instagram {
+  bottom: 85px;
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  text-decoration: none;
+}
+
+.social-float:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  background: var(--marrom-escuro);
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* texto */
+footer p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* redes sociais */
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 15px;
+}
+
+/* botão circular bonito */
+.social-footer a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  background: rgba(255,255,255,0.08);
+  transition: transform 0.25s ease;
+}
+
+/* hover mais elegante */
+.social-footer a:hover {
+  transform: translateY(-3px);
+}
+
+/* cores específicas */
+.social-footer a:nth-child(1):hover {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.social-footer a:nth-child(2):hover {
+  background: #25D366;
+}
+
+.insta-post {
+  position: relative;
+  min-height: 380px;
+}
+
+/* skeleton */
+.insta-post::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #eee, #f5f5f5, #eee);
+  background-size: 200% 100%;
+  animation: loading 1.2s infinite;
+  z-index: 1;
+}
+
+/* esconde quando carregar */
+.insta-post.loaded::before {
+  display: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
