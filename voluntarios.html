@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Voluntários | Soma + Ação</title>
+  <title>Voluntarios | Soma + Ação</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +13,7 @@
 <!-- HEADER -->
 <header>
   <div class="logo">
-    <img src="imagens/soma.jpg">
+    <img src="imagens/Logopng.png">
     <span>Soma + Ação</span>
   </div>
 
@@ -25,59 +25,156 @@
     <a href="contato.html">Contato</a>
   </nav>
 </header>
-<section class="historia">
+<section class="historia hero-voluntario">
+
+  <div class="overlay-voluntario"></div>
+
   <div class="container historia-box">
 
-    <div class="historia-img">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-    </div>
-
     <div class="historia-texto">
-      <h2>Você pode fazer parte disso</h2>
+      <span class="tag-voluntario">
+        Faça parte da mudança
+      </span>
+
+      <h1>
+        Pequenas ações podem
+        transformar vidas.
+      </h1>
 
       <p>
-        Cada voluntário representa esperança para quem precisa.
+        Toda semana voluntários ajudam pessoas,
+        famílias e comunidades inteiras através
+        das ações do Soma + Ação.
       </p>
 
-      <p>
-        Não importa sua área — sempre existe uma forma de ajudar.
-      </p>
+      <button onclick="abrirModal()">
+        Quero ser voluntário
+      </button>
     </div>
 
   </div>
+
 </section>
 
-<section class="pagina">
-  <h1>Seja um voluntário</h1>
+<section class="pagina voluntariado-section">
 
-  <p>
-    Faça parte de um movimento que transforma vidas todos os dias.
-    Não é necessário experiência, apenas vontade de ajudar.
-  </p>
+  <div class="container">
 
-  <h3>Como você pode ajudar:</h3>
+    <span class="mini-tag">
+      Faça parte da transformação
+    </span>
 
-  <ul>
-    <li>✔ Participando das ações nas ruas</li>
-    <li>✔ Apoiando na organização</li>
-    <li>✔ Contribuindo com sua profissão (médico, psicólogo, etc.)</li>
-    <li>✔ Ajudando na divulgação</li>
-  </ul>
+    <h1>Seja um voluntário</h1>
 
-  <p>
-    Nossas ações acontecem semanalmente e você pode participar
-    de acordo com sua disponibilidade.
-  </p>
+    <p class="voluntario-desc">
+      Faça parte de um movimento que transforma vidas todos os dias.
+      Não é necessário experiência, apenas vontade de ajudar.
+    </p>
 
+    <div class="voluntario-grid">
+
+      <div class="voluntario-card">
+        <div class="icone-voluntario">🤝</div>
+
+        <h3>Ações Solidárias</h3>
+
+        <p>
+          Participe das ações sociais realizadas nas ruas
+          e ajude diretamente quem precisa.
+        </p>
+      </div>
+
+      <div class="voluntario-card">
+        <div class="icone-voluntario">📦</div>
+
+        <h3>Organização</h3>
+
+        <p>
+          Auxilie na separação, montagem e logística
+          das campanhas e eventos.
+        </p>
+      </div>
+
+      <div class="voluntario-card">
+        <div class="icone-voluntario">💚</div>
+
+        <h3>Profissionais</h3>
+
+        <p>
+          Médicos, psicólogos, professores e outros
+          profissionais podem contribuir com seus conhecimentos.
+        </p>
+      </div>
+
+      <div class="voluntario-card">
+        <div class="icone-voluntario">📢</div>
+
+        <h3>Divulgação</h3>
+
+        <p>
+          Ajude compartilhando nossas ações e ampliando
+          o impacto do projeto.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="info-voluntario">
+      <p>
+        Nossas ações acontecem semanalmente e você pode participar
+        conforme sua disponibilidade.
+      </p>
+
+      <button onclick="abrirModal()">
+        Quero participar
+      </button>
+    </div>
 
   </div>
+
 </section>
-  <form>
-    <input type="text" placeholder="Seu nome" required>
-    <input type="email" placeholder="Seu email" required>
-    <textarea placeholder="Como você gostaria de ajudar?"></textarea>
-    <button>Quero participar</button>
-  </form>
+<!-- MODAL -->
+<div class="modal-voluntario" id="modalVoluntario">
+
+  <div class="modal-box">
+
+    <button class="fechar-modal" onclick="fecharModal()">
+      ✕
+    </button>
+
+    <h2>Quero ser voluntário</h2>
+
+    <p class="form-subtitle">
+      Preencha os dados e entraremos em contato.
+    </p>
+
+    <form>
+
+      <div class="input-group">
+        <input type="text" placeholder="Seu nome completo" required>
+      </div>
+
+      <div class="input-group">
+        <input type="email" placeholder="Seu melhor e-mail" required>
+      </div>
+
+      <div class="input-group">
+        <input type="tel" placeholder="Telefone / WhatsApp">
+      </div>
+
+      <div class="input-group">
+        <textarea placeholder="Como você gostaria de ajudar?"></textarea>
+      </div>
+
+      <button type="submit">
+        Quero participar
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
 </section>
 
 <footer>

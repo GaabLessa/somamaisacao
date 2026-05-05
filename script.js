@@ -47,3 +47,26 @@ function markLoaded() {
 }
 
 window.addEventListener("load", markLoaded);
+
+function abrirModal() {
+  document
+    .getElementById("modalVoluntario")
+    .classList.add("active");
+}
+
+function fecharModal() {
+  document
+    .getElementById("modalVoluntario")
+    .classList.remove("active");
+}
+
+window.addEventListener("click", function(e) {
+
+  const modal =
+    document.getElementById("modalVoluntario");
+
+  if (e.target === modal) {
+    fecharModal();
+  }
+
+});
